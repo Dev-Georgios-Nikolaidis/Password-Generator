@@ -1,0 +1,1 @@
+For best performance use google chrome/firefox.
