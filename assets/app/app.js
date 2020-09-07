@@ -3,6 +3,7 @@ const btn = document.querySelector(".container__btn");
 const resetbtn = document.querySelector(".btn--reset");
 const quitBtn = document.querySelector(".btn--quit");
 const body = document.querySelector("body");
+const passwordLengthInput = document.querySelector(".container__input");
 const subPragraph = document.querySelector(".container__paragraph");
 const displayParagraph = document.querySelector(".container__password--showcase");
 const audio = document.querySelector(".container__audio");
@@ -12,7 +13,7 @@ displayParagraph.style.visibility = "hidden";
 //Globla Variables
 let counter = 0;
 let myPassword = [];
-
+let howMuchDigitsPassword = 25;
 //Create the password
 function passwordGenerator(howMuchDigitsPassword) {
     if (counter < howMuchDigitsPassword) {
@@ -48,15 +49,21 @@ function styleResetHanlder() {
     displayParagraph.style.visibility = "hidden";
 }
 
+function isANumberChecker() {}
+
 //Event Listeners
-btn.addEventListener("click", () => {
-    passwordGenerator(12);
+btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    // let howMuchDigitsPassword = isANumberChecker();
+
+    passwordGenerator(howMuchDigitsPassword);
     styleSuccesHandler();
     displayParagraph.textContent = myPassword.join("");
 });
 
 //Reset Values
-resetbtn.addEventListener("click", () => {
+resetbtn.addEventListener("click", (event) => {
+    event.preventDefault();
     styleResetHanlder();
     counter = 0;
     myPassword = [];
@@ -124,4 +131,8 @@ const strings = [
     "@",
     "$",
     "%",
+    "#",
+    "_",
+    "-",
+    "&",
 ];

@@ -24,12 +24,8 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 40rem;
-    max-width: 30rem;
+    min-height: 50rem;
+    max-width: 45rem;
     margin: 20vh auto;
     border: 1px solid #000;
     background-image: url("/assets/img/container_matrix.gif");
@@ -37,6 +33,13 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     color: #fff;
     border-radius: 0.6rem;
+}
+
+.container__form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .container__audio {
@@ -47,6 +50,31 @@ body {
     font-size: 2rem;
     text-align: center;
     margin-top: 4rem;
+}
+
+.container__input {
+    padding: 1rem 2rem;
+    width: 20rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: 1px solid #fff;
+    background: transparent;
+    font-size: 1.5rem;
+}
+.container__input::placeholder {
+    color: rgb(126, 230, 8);
+}
+
+.container__input:focus {
+    /* background: transparent; */
+    /* color: rgb(126, 230, 8); */
+    color: #fff;
+    outline: none;
+    border: 1px solid rgb(126, 230, 8);
 }
 
 .container__paragraph {
@@ -63,7 +91,6 @@ body {
 }
 .success {
     border: 2px solid #fff;
-    /* padding: 1rem; */
     color: rgb(126, 230, 8);
     background: transparent;
     border-radius: 0.5rem;
@@ -76,7 +103,6 @@ body {
     width: 20rem;
     text-transform: uppercase;
     text-decoration: none;
-    border: none;
     cursor: pointer;
     border-radius: 0.5rem;
     transition: all 0.2s;

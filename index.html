@@ -9,15 +9,18 @@
     </head>
     <body>
         <div class="container">
-            <audio class="container__audio" controls>
-                <source src="/assets/audio/matrix.mp3" type="audio/mp3" autoplay="autoplay" />
-            </audio>
-            <h1 class="container__heading">The matrix Password Generator</h1>
-            <p class="container__paragraph">Your New Password</p>
-            <p class="container__password--showcase success">14r2H44y82Ek</p>
-            <button class="container__btn">Create Password</button>
-            <button class="container__btn btn--reset">Reset Password</button>
-            <button class="container__btn btn--quit">Quit Matrix</button>
+            <form class="container__form" action="">
+                <audio class="container__audio" controls>
+                    <source src="/assets/audio/matrix.mp3" type="audio/mp3" autoplay="autoplay" />
+                </audio>
+                <h1 class="container__heading">The matrix Password Generator</h1>
+                <input type="text" class="container__input" placeholder="Password Length" />
+                <p class="container__paragraph">Your New Password</p>
+                <p class="container__password--showcase success">14r2H44y82Ek</p>
+                <button class="container__btn" type="submit">Create Password</button>
+                <button class="container__btn btn--reset" type="submit">Reset Password</button>
+                <button class="container__btn btn--quit" type="submit">Quit Matrix</button>
+            </form>
         </div>
     </body>
 </html>
